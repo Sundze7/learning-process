@@ -1,0 +1,16 @@
+img.align-left{
+    float: left;
+    margin-right: 10px;
+}
+img.align-right{
+    float: right;
+    margin-left: 10px;
+}
+img.align-center{
+    display: block;
+    margin: 0px auto;
+}
+img.medium{
+    width: 250px;
+    height: 250px;
+}

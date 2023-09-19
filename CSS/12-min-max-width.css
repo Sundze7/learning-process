@@ -1,0 +1,11 @@
+td.description{
+    min-width: 450px;
+    max-width: 650px;
+    text-align: left;
+    padding: 5px;
+    
+}
+img{
+    float: left;
+    margin: 10px 10px 0px 0px;
+}

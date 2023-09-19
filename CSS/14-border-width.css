@@ -1,0 +1,16 @@
+p.one{
+    border: 2px dashed black;
+    border-width: 2px;
+}
+p.two{
+    border: 5px groove orange;
+    border-width: thick;
+    border-color: #bbbbaa #111111 #ee3e80 #0088dd;
+    padding: 15px;
+    margin: 20px;
+}
+p.three{
+    border: 1px solid blueviolet;
+    border-width: 1px 4px 12px 4px;
+    padding: 10px;
+}
