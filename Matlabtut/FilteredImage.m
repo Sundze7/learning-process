@@ -1,0 +1,1 @@
+gausfil = imfilter('Yello_Python.JPG',GaussianKernel(5,1));
