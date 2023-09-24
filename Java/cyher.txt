@@ -1,0 +1,120 @@
+#include<stdio.h>
+#include<stdlib.h>
+#include<math.h>
+
+int option;
+
+void encryption();
+void decryption();
+
+int main()
+{
+
+    printf("\n\t CEASER CYPHER ALGORITHM\n");
+    printf("\n\t enter option number to select action: \n");
+
+   do{
+        printf("\n\t 1. Encryption \n\t 2. Decryption\n\t 0. Exit Program \t");
+        printf("\n\n\t");
+        scanf("%d", &option);
+        switch(option)
+        {
+        case 1:
+            {
+               /// system("cls");
+                printf("\n\n");
+                encryption();
+                printf("\n\n");
+                break;
+            }
+        case 2:
+            {
+                ///system("cls");
+                printf("\n\n");
+                decryption();
+                printf("\n\n");
+                break;
+            }
+        default:
+            {
+                system("cls");
+                printf("\n\n");
+                printf("\n Invalid option or Program is exiting\n");
+                printf("\n\n");
+            }
+
+        }
+    } while(option!=0);
+    return 0;
+
+}
+
+
+void encryption()
+{
+    char message[100],ch;
+    int i, key;
+
+    printf("Enter message to encrypt: \n");
+    gets(message);
+    printf("Enter key: \n");
+    scanf("%d", &key);
+
+    for(i=0; message[i]!='\0'; ++i){
+        ch= message[i];
+
+        if(ch >= 'a' && ch <= 'z'){
+            ch= ch + key;
+
+            if(ch > 'z'){
+                ch = ch-'z'+'a'-1;
+            }
+            message[i] = ch;
+        }
+        else if(ch>='A' && ch<='Z'){
+            ch = ch + key;
+
+            if(ch<'Z'){
+                ch = ch-'Z'+'A'-1;
+            }
+            message[i]= ch;
+        }
+    }
+    printf("Encrypted message: %s", message);
+
+}
+
+void decryption()
+{
+    char message[100],ch;
+    int i, key;
+
+    printf("Enter message to decrypt: \n");
+    gets(message);
+    printf("Enter key: \n");
+    scanf("%d", &key);
+
+    for(i=0; message[i]!='\0'; ++i){
+        ch= message[i];
+
+        if(ch >= 'a' && ch <= 'z'){
+            ch= ch - key;
+
+            if(ch < 'a'){
+                ch = ch+'z'-'a'+1;
+            }
+            message[i] = ch;
+        }
+        else if(ch>='A' && ch<='Z'){
+            ch = ch - key;
+
+            if(ch<'A'){
+                ch = ch+'Z'-'A'+1;
+            }
+            message[i]= ch;
+        }
+    }
+    printf("Decrypted message: %s", message);
+
+}
+
